@@ -9,6 +9,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -33,5 +34,8 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
+
+    @OneToOne
+    private Wallet wallet;
 
 }
